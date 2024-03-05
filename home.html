@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="Stylesheet" href="style.css">
+</head>
+
+  <header class="header">
+    <a href="#" class="Logo">ANISHA</a>
+    <nav class="navbar">
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact Details</a>
+      <a href="#resume">My Resume</a>
+      <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+  }
+  html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+  }
+  section{
+    padding:2rem 7%;
+  }
+  body{
+    min-height: 100vh;
+    background: var(--black);
+    background-size: cover;
+    background-position: center;
+  }
+  .header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+  }
+  .header .navbar a{
+    margin:0 3rem;
+    font-size: 1.6rem;
+    color: var(--ref);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+  }
+  .Logo{
+    font-size: 4rem;
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  /* Home */
+  .home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:url(image.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .home .content{
+    max-width: 60rem;
+  }
+  
+  .home .content h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color:var(--bg);
+  }
+  .about .row{
+    display: flex;
+    align-items: center;
+    background:var(--black);
+    flex-wrap: wrap;
+  }
+  .home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding:1rem 0;
+    color: var(--ref);
+  }
+  /* About */
+  .about .row .image{
+    flex:1 1 45rem;
+  }
+  
+  .about .row .image img{
+    width: 100%;
+  }
+  .about .row .content{
+    flex:1 1 45rem;
+    padding:2rem;
+  }
+  .about h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--bg);
+    text-align: center;
+    text-decoration: underline;
+  }
+  .about .row .content h3{
+    font-size: 3rem;
+    color:var(--bg);
+  }
+  
+  .about .row .content p{
+    font-size: 1.6rem;
+    color:var(--ref);
+    padding:1rem 0;
+    line-height: 1.8;
+  }
+  /Projects/
+  .projects .heading{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--bg);
+    text-align: center;
+    text-decoration: underline;
+  }
+  .projects .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+  }
+  
+  .projects .box-container .box{
+    border:var(--border);    
+  }
+  
+  .projects .box-container .box .image{
+    height: 25rem;
+    overflow:hidden;
+    width: 100%;
+  }
+  
+  .projects .box-container .box .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .projects .box-container .box:hover .image img{
+    transform: scale(1.2);
+  }
+  
+  .projects .box-container .box .content{
+    padding:2rem;
+  }
+  
+  .projects .box-container .box .content .title{
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color:var(--bg);
+  }
+  
+  .projects .box-container .box .content .title:hover{
+    color:var(--main-color);
+  }
+  
+  .projects .box-container .box .content span{
+    color:var(--main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+  }
+  
+  .projects .box-container .box .content p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color:var(--ref);
+    padding:1rem 0;
+  }
+  /* Resume */
+  #resume {
+    background-color: var(--black);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #resume a {
+    background-color: var(--ref);
+    color: var(--bg);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  #resume h2{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--bg);
+    text-align: center;
+    text-decoration: underline;
+  }
+  #resume p{
+    font-size: 1.6rem;
+    color:var(--ref);
+    padding:1rem 0;
+    line-height: 1.8;
+  }
+  
+  #resume a:hover {
+    background-color: var(--main-color);
+  }
+  /* Contact details */
+  #contact h2{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--bg);
+    text-align: center;
+    text-decoration: underline;
+  }
+  #contact p{
+    font-size: 1.6rem;
+    color:var(--ref);
+    padding:1rem 0;
+    line-height: 1.8;
+  }
+  /*Footer */
+  footer{
+    background: var(--black);
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: var(--main-color);
+  }
+  .footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    text-align: center;
+  }
+  :root{
+    --main-color: #842c2c;
+    --black:#5e5b1a;
+    --bg:#040c0c;
+    --ref:#baafa2;
+    --border:.1rem solid rgba(255,255,255,.3);
+  }
+      </style>
+    </nav>
+  </header>
+
+<body> 
+<section class="home" id="home">
+    <div class="content">
+        <h1>Hello World..... <br>I am <br>Anisha routray</h1>
+        <p>I' m a College Student .I am Passionate and Determined </p>
+    </div>
+</section>
+<section class="about" id="about">
+
+  <h1 class="heading"> <span>about</span> us </h1>
+
+  <div class="row">
+
+      <div class="image">
+          <img src="" alt="">
+      </div>
+
+      <div class="content">
+          <h3>Hello, I'm Anisha Routray, </h3>
+          <p>a 2nd year student with a keen interest in cutting-edge technologies that are shaping the future.
+            </p>
+            <p>Right now I am learning html,CSS and interested in making my future in web development </p>
+            <p>Seeking for right opportunities to make my learning process better</p>
+            
+          </dstudentiv>
+
+  </div>
+</section>
+<section class="projects" id="projects">
+
+  <h1 class="heading"> My <span>Projects : Currently working on it.</span> </h1>
+
+  <div class="box-container">
+
+      <div class="box">
+          <div class="image">
+              <img src="/htmlimage.png" alt="HTML" height:20px>
+          </div>
+          <div class="content">
+              <a href="#" class="title">HTML</a>
+              
+              <p> knowing HTML that create web pages has build my interest in learning it.HTML allows for effective communication with developers. I'm dedicated to exploring it and developing web pages.</p>
+                
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="image">
+              <img src="/cssimage.png" alt="CSS"height:30px; width:10%>
+          </div>
+          <div class="content">
+              <a href="#" class="title">CSS</a>
+             
+              <p>learning CSS makes my interest more stronger in making web sites.Understanding selectors,properties,and values in CSS is esstential for creating cohesive and aesthetically pleasing websites .</p>
+          </div>
+      </div>
+  </div>
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>You can download my resume by clicking the link below:</p>
+    <a href=resume.html>Resume (PDF)</a>
+</section>
+
+<!-- <section id="contact">
+    <h2>Contact Details</h2>
+    <p> Feel free to contact for any query</p>
+     -->
+    <!-- <p>Email: <a href="#"></a></p> -->
+</section>
+
+
+  </div>
+<footer>
+  <div class="footer-content">
+    <h3>Created by ANISHA ROUTRAY.|All rights reserved </h3>
+  </div>
+</footer>
+</body>
+</html>
